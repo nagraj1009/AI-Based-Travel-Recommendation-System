@@ -115,6 +115,42 @@ The system uses Google Gemini to generate personalized itineraries and provides 
 - python-dotenv
 
 ---
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+git clone https://github.com/nagraj1009/AI-Based-Travel-Recommendation-System.git
+
+cd AI-Based-Travel-Recommendation-System
+
+### 2. Create a Virtual Environment
+
+python -m venv venv
+
+### 3. Activate the Virtual Environment
+
+#### Windows
+
+venv\Scripts\activate
+
+### 4. Install Dependencies
+
+pip install -r requirements.txt
+
+### 5. Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+GEMINI_API_KEY=your_gemini_api_key
+SECRET_KEY=your_secret_key
+
+### 6. Run the Application
+
+python app.py
+
+Open your browser and visit:
+
+http://127.0.0.1:5000
 
 ## 📁 Project Structure
 
