@@ -13,10 +13,14 @@ from auth.routes import (
     login_user,
     logout_user
 )
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "travel_secret_key"
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 bcrypt.init_app(app)
 
