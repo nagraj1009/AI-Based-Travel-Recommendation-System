@@ -61,6 +61,28 @@ The system uses Google Gemini to generate personalized itineraries and provides 
 - Simple and user-friendly navigation
 
 ---
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/homepage.png)
+
+### 🔐 Login Page
+![Login Page](screenshots/login.png)
+
+### 📊 User Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### ✈️ AI Travel Planner
+![AI Planner](screenshots/planner.png)
+
+### 🤖 AI-Generated Itinerary
+![Generated Itinerary](screenshots/planner-generated.png)
+
+### 🏨 Trip Details
+![Trip Details](screenshots/trip-details.png)
+
+### 🌐 Travel Resources
+![Travel Resources](screenshots/travel-resources.png)
 
 ## 🛠️ Tech Stack
 
