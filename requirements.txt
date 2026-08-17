@@ -3,3 +3,4 @@ Flask-Bcrypt
 google-generativeai
 python-dotenv
 reportlab
+gunicorn
