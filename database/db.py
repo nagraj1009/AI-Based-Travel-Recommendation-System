@@ -1,6 +1,10 @@
 import sqlite3
+import os
 
-DATABASE = "travel.db"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DATABASE = os.path.join(BASE_DIR, "travel.db")
+
 
 def get_connection():
     conn = sqlite3.connect(DATABASE)
@@ -9,10 +13,11 @@ def get_connection():
 
 
 def initialize_database():
-
     conn = get_connection()
 
-    with open("database/schema.sql", "r") as file:
+    schema_path = os.path.join(BASE_DIR, "database", "schema.sql")
+
+    with open(schema_path, "r", encoding="utf-8") as file:
         conn.executescript(file.read())
 
     conn.commit()
