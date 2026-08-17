@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+```
+<div class="row">
+
+    <div class="col-lg-3">
+
+        <div class="glass">
+
+            <h3 class="mb-4">
+                ✈ AI Planner
+            </h3>
+
+            <form method="POST">
+
+                <label>Source</label>
+                <input type="text"
+                       name="source"
+                       class="form-control mb-3"
+                       required>
+
+                <label>Destination</label>
+                <input type="text"
+                       name="destination"
+                       class="form-control mb-3"
+                       required>
+
+                <label>Budget</label>
+                <input type="text"
+                       name="budget"
+                       class="form-control mb-3"
+                       required>
+
+                <label>Days</label>
+                <input type="number"
+                       name="days"
+                       class="form-control mb-3"
+                       required>
+
+                <label>Travel Style</label>
+
+                <select name="style"
+                        class="form-control mb-4">
+
+                    <option>Luxury</option>
+                    <option>Budget</option>
+                    <option>Adventure</option>
+                    <option>Family</option>
+                    <option>Solo</option>
+
+                </select>
+
+                <button id="generateBtn"
+                        class="btn btn-primary w-100">
+
+                    ✨ Generate Plan
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-9">
+
+        <div class="glass">
+
+            {% if trip %}
+
+            <div class="itinerary-card">
+
+                <h2>
+                    🌍 {{ trip.title }}
+                </h2>
+
+                <p>
+                    {{ trip.overview }}
+                </p>
+
+            </div>
+
+            {% for day in trip.days %}
+
+            <div class="day-card">
+
+                <h4>
+                    📅 {{ day.day }}
+                </h4>
+
+                <ul>
+
+                    {% for activity in day.activities %}
+
+                    <li>{{ activity }}</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endfor %}
+
+            <div class="hotel-card">
+
+                <h4>🏨 Hotel</h4>
+
+                <p>{{ trip.hotel }}</p>
+
+            </div>
+
+            <div class="food-card">
+
+                <h4>🍽 Food</h4>
+
+                <p>{{ trip.food }}</p>
+
+            </div>
+
+            <div class="transport-card">
+
+                <h4>🚕 Transport</h4>
+
+                <p>{{ trip.transport }}</p>
+
+            </div>
+
+            <div class="budget-card">
+
+                <h4>💰 Budget</h4>
+
+                <p>{{ trip.budget }}</p>
+
+            </div>
+
+            <div class="transport-card mt-4">
+
+                <h4>🌐 Travel Resources</h4>
+                <a href="/download-pdf"
+                    class="btn btn-danger">
+
+                    📄 Download PDF
+
+                    </a>
+
+                <div class="d-flex flex-wrap gap-2 mt-3">
+
+                    <a href="{{ flight_link }}"
+                       target="_blank"
+                       class="btn btn-primary">
+
+                        ✈ Flights
+
+                    </a>
+
+                    <a href="{{ train_link }}"
+                       target="_blank"
+                       class="btn btn-success">
+
+                        🚆 Trains
+
+                    </a>
+
+                    <a href="{{ bus_link }}"
+                       target="_blank"
+                       class="btn btn-warning">
+
+                        🚌 Buses
+
+                    </a>
+
+                    <a href="{{ maps_link }}"
+                       target="_blank"
+                       class="btn btn-info">
+
+                        📍 Maps
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% else %}
+
+            <div class="text-center p-5">
+
+                <h2>
+                    🌍 Plan Your Next Journey
+                </h2>
+
+                <p>
+                    Enter your trip details and let AI create a personalized itinerary.
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+{% endblock %}

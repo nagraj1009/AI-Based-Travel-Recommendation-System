@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1>
+        Welcome {{ session.fullname }}
+    </h1>
+
+    <br>
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="glass text-center">
+                <h2>12</h2>
+                <p>Trips Planned</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="glass text-center">
+                <h2>5</h2>
+                <p>Bookings</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="glass text-center">
+                <h2>8</h2>
+                <p>Saved Trips</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="glass text-center">
+                <h2>3</h2>
+                <p>Countries</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

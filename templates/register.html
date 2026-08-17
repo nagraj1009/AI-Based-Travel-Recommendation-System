@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row justify-content-center mt-5">
+
+        <div class="col-md-5">
+
+            <div class="glass">
+
+                <h2 class="mb-4">
+                    Create Account
+                </h2>
+
+                <form method="POST">
+
+                    <input
+                        class="form-control mb-3"
+                        type="text"
+                        name="fullname"
+                        placeholder="Full Name"
+                        required>
+
+                    <input
+                        class="form-control mb-3"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required>
+
+                    <input
+                        class="form-control mb-3"
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        required>
+
+                    <button
+                        class="btn btn-primary w-100">
+
+                        Register
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
